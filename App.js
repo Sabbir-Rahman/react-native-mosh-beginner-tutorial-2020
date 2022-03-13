@@ -1,22 +1,22 @@
 import { StatusBar } from 'expo-status-bar'
-import { StyleSheet, Text, TouchableOpacity, View, Image } from 'react-native'
+import {
+  StyleSheet,
+  Text,
+  TouchableOpacity,
+  View,
+  Image,
+  Button
+} from 'react-native'
 
 export default function App() {
   const handlePress = () => alert('Pressed')
   return (
     <View style={styles.container}>
-      <Text numberOfLines={1} onPress={handlePress}>
-        Hello React native
-      </Text>
-      <TouchableOpacity onPress={() => alert('Tapped')}>
-        <Image
-          source={{
-            width: 200,
-            height: 300,
-            uri: 'https://picsum.photos/200/300'
-          }}
-        />
-      </TouchableOpacity>
+      <Button
+        color='dodgerblue'
+        title='Click me'
+        onPress={() => alert('Button cliked')}
+      />
     </View>
   )
 }
