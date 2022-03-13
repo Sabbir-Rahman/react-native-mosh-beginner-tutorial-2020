@@ -2,12 +2,10 @@ import { StatusBar } from 'expo-status-bar';
 import { StyleSheet, Text, View } from 'react-native';
 
 export default function App() {
-  let x = 1;
-  console.log("App executed")
-  
+  const handlePress = () => alert('Pressed')
   return (
     <View style={styles.container}>
-      <Text>Open up App.js to start working on your app!</Text>
+      <Text numberOfLines={1} onPress={handlePress}>Hello World. A very very long line that is used to check the number of lines parameter of the text property in react native</Text>
       <StatusBar style="auto" />
     </View>
   );
@@ -16,7 +14,7 @@ export default function App() {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: '#fff',
+    backgroundColor: 'dodgerblue',
     alignItems: 'center',
     justifyContent: 'center',
   },
