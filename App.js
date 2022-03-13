@@ -5,7 +5,8 @@ import {
   TouchableOpacity,
   View,
   Image,
-  Button
+  Button,
+  Alert
 } from 'react-native'
 
 export default function App() {
@@ -15,7 +16,13 @@ export default function App() {
       <Button
         color='dodgerblue'
         title='Click me'
-        onPress={() => alert('Button cliked')}
+        onPress={() =>
+          // Alert.alert('My title', 'My Message', [
+          //   { text: 'Yes', onPress: () => console.log('Yes') },
+          //   { text: 'No' }
+          // ])
+          Alert.prompt('My message', 'My title', text => console.log(text))
+        }
       />
     </View>
   )
